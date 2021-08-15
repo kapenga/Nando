@@ -19,4 +19,12 @@ Limit the maximum depth of the tree and the number of 'expands' in case of Binar
 3. If everything is a nand operations only the leaf nodes are of interest. There is less information to store. Trees are more easy to compare.
 
 ### What's the advantage above other algorithms?
-... Lorem Ipsum thingy.
+As soon as I find similar algorithms I will compare things.
+
+### How it works (in depth)
+The central mechanic is a recursive function.
+This function starts with the root node. The node is initialised with the (possibly inverted) input column that has the greatest similarity (best score) with the target column.
+The scoring function is a bitcount on the resulting column after the following operation: (inputColumn ^ targetColumn) & careColumn.
+The careColumn is initialised with all values set to true.
+
+Later more...
